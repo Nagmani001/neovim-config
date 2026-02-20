@@ -6,10 +6,12 @@ vim.keymap.set("n", "<leader>li", ":LspInfo<CR>", { desc = "LSP Info" })
 
 -- always use vim.keymap.set
 
+-- Scroll screen with leader + j/k
+vim.keymap.set("n", "<leader>j", "<C-d>", { desc = "Scroll down" })
+vim.keymap.set("n", "<leader>k", "<C-u>", { desc = "Scroll up" })
+
 -- Move to window using <leader> + hjkl keys
 vim.keymap.set("n", "<leader>h", "<C-w>h", { desc = "Go to Left Window" })
-vim.keymap.set("n", "<leader>j", "<C-w>j", { desc = "Go to Lower Window" })
-vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "Go to Upper Window" })
 vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "Go to Right Window" })
 
 -- keymaps for prisma
@@ -29,3 +31,5 @@ vim.keymap.set("i", "H", "H", { noremap = true, silent = true })
 vim.keymap.set("i", "J", "J", { noremap = true, silent = true })
 vim.keymap.set("i", "K", "K", { noremap = true, silent = true })
 vim.keymap.set("i", "L", "L", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>a", vim.diagnostic.open_float, { desc = "[E]xpand diagnostic message" })
